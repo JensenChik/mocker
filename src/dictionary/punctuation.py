@@ -1,3 +1,5 @@
 # -*- coding:utf-8 -*-
-EnglishPunctuation = ['!', '?']
-ChineseTerminalPunctuation = ['。', '！', '？']
+ENGLISH_TERMINAL_PUNCTUATION = ['.', '!', '?']
+CHINESE_TERMINAL_PUNCTUATION = ['。', '！', '？']
+
+

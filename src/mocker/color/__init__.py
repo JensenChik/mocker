@@ -1,9 +1,10 @@
-def ColorHex():
+def ColorHex(count=1):
     pass
 
 
-def ColorRGB():
+def ColorRGB(count=1):
     pass
 
-def ColorRGBA():
+
+def ColorRGBA(count=1):
     pass
