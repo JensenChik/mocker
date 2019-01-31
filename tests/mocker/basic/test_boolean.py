@@ -8,7 +8,15 @@ class TestBoolean(TestCase):
         with self.assertRaises(AssertionError):
             Boolean(-1)
         with self.assertRaises(AssertionError):
+            Boolean(count=-1)
+        with self.assertRaises(AssertionError):
             Boolean(0)
+        with self.assertRaises(AssertionError):
+            Boolean(count=0)
+        with self.assertRaises(AssertionError):
+            Boolean('some string')
+        with self.assertRaises(AssertionError):
+            Boolean(count='some string')
         with self.assertRaises(AssertionError):
             Boolean(None)
 

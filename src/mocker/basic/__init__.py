@@ -32,6 +32,7 @@ def __int_between_1_and(max_len):
     return int(1 + (random() * max_len - 1))
 
 
+@count_must_grater_than_zero
 def String(count=1, selection=None, charset=ALPHABET, fixed_len=None, max_len=None):
     if selection is not None:
         return [choice(selection) for _ in range(count)]
