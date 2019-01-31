@@ -1,24 +1,24 @@
 from random import random, choice
 from dictionary import ALPHABET
-from mocker.exception import count_must_grater_than_zero
+from mocker.exception import check_count
 
 
-@count_must_grater_than_zero
+@check_count
 def Boolean(count=1, true_ratio=0.5):
     return [random() < true_ratio for _ in range(count)]
 
 
-@count_must_grater_than_zero
+@check_count
 def Char(count=1, selection=ALPHABET):
     return [choice(selection) for _ in range(count)]
 
 
-@count_must_grater_than_zero
+@check_count
 def Float(count=1, min=0, max=1):
     return [min + random() * (max - min) for _ in range(count)]
 
 
-@count_must_grater_than_zero
+@check_count
 def Integer(count=1, min=0, max=10):
     return [int(min + random() * (max - min)) for _ in range(count)]
 
@@ -32,7 +32,7 @@ def __int_between_1_and(max_len):
     return int(1 + (random() * max_len - 1))
 
 
-@count_must_grater_than_zero
+@check_count
 def String(count=1, selection=None, charset=ALPHABET, fixed_len=None, max_len=None):
     if selection is not None:
         return [choice(selection) for _ in range(count)]

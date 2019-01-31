@@ -28,4 +28,4 @@ class TestBoolean(TestCase):
         true_count = 0
         for flag in Boolean(12345, true_ratio=0.1):
             true_count += 1 if flag else 0
-        self.assertAlmostEqual(1.0 * true_count / 12345, 0.1, 1)
+        self.assertAlmostEqual(1.0 * true_count / 12345, 0.1, 2)
